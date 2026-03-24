@@ -2,3 +2,5 @@
 images/*.png
 generate-images.py
 image-prompts.md
+images/v2/*.png
+generate-images-v2.py
