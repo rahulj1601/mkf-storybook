@@ -219,7 +219,7 @@
     margin-bottom: 6px;
   }
 
-  .book-card:hover { transform: translateY(-10px); }
+  .book-card:hover { transform: translateY(-10px) rotate(-2deg); }
   .book-card:active { transform: translateY(-6px) scale(0.98); }
 
   /* 3D Book */
@@ -400,6 +400,7 @@
     border-radius: 3px;
     z-index: 10;
     box-shadow: 0 2px 6px rgba(194,9,15,0.3);
+    animation: badgeBounce 2s ease-in-out infinite;
   }
 
   /* Coming Soon */
@@ -492,6 +493,11 @@
     .book-card-label { font-size: 12px; }
   }
 
+  @keyframes badgeBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
   @media (max-width: 380px) {
     .book-3d, .coming-soon-3d {
       width: 110px;
@@ -518,8 +524,8 @@
 
 <!-- Hero -->
 <div class="hero">
-  <h1>Choose Your <span>Story</span></h1>
-  <p>Cosy up and read along with your favourite MKF characters. New stories every month!</p>
+  <h1>Pick Your <span>Adventure!</span></h1>
+  <p>Join Snake & Crane on amazing adventures! New stories landing every month.</p>
 </div>
 
 <!-- Tabs -->
@@ -541,19 +547,8 @@
           <div class="book-spine-edge"></div>
           <div class="book-pages-edge"></div>
           <div class="book-front">
-            <div class="book-front-inner leather-brown">
-              <div class="book-gold-border"></div>
-              <div class="book-cover-sub">Mat Chat Stories</div>
-              <div class="mini-tree">
-                <div class="mt-c mt-c4"></div>
-                <div class="mt-c mt-c2"></div>
-                <div class="mt-c mt-c1"></div>
-                <div class="mt-c mt-c3"></div>
-                <div class="mt-trunk"></div>
-              </div>
-              <div class="book-cover-title">The Magical<br>Mistake Tree</div>
-              <div class="book-cover-divider"></div>
-              <div class="book-cover-sub">Meridian Kung Fu</div>
+            <div class="book-front-inner" style="padding:0;">
+              <img src="images/cover.webp" alt="The Magical Mistake Tree" style="width:100%;height:100%;object-fit:cover;border-radius:2px 6px 6px 2px;">
             </div>
           </div>
         </div>

@@ -1,0 +1,4 @@
+.env
+images/*.png
+generate-images.py
+image-prompts.md

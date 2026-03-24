@@ -195,21 +195,7 @@
   }
 
   .cover-page .page-inner {
-    /* Leather-like brown with grain */
-    background:
-      /* Grain noise */
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E"),
-      /* Base leather gradient */
-      linear-gradient(160deg,
-        #111 0%,
-        #1a1a1a 12%,
-        #222 25%,
-        #1a1a1a 38%,
-        #111 50%,
-        #1a1a1a 62%,
-        #222 75%,
-        #111 100%
-      );
+    background: url('../images/cover.webp') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,6 +294,7 @@
     height: 140px;
     position: relative;
     margin-bottom: 4px;
+    display: none;
   }
 
   .tree-trunk {
@@ -362,6 +349,7 @@
     opacity: 0.6;
     animation: leafDrift 5s ease-in-out infinite;
     z-index: 6;
+    display: none;
   }
 
   .leaf:nth-child(1) { background: #c2090f; top: 28%; left: 22%; animation-delay: 0s; }
@@ -462,7 +450,7 @@
 
   .page-img-area {
     width: 100%;
-    height: 48%;
+    height: 52%;
     background: #f5f5f5;
     display: flex;
     align-items: center;
@@ -512,6 +500,7 @@
   .story-text .dialogue {
     color: #c2090f;
     font-style: italic;
+    font-size: 105%;
   }
 
   .story-text .emphasis {
@@ -668,7 +657,7 @@
       <div class="page story-page" data-page="1" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">🏘️</span>Luna walking through Wing Chun Ville</div>
+            <img src="../images/page-01-village.webp" alt="Luna walking through Wing Chun Ville">
           </div>
           <div class="page-text-area">
             <p class="story-text">Once upon a time in a bright, bustling village called <span class="emphasis">Wing Chun Ville</span>, there lived a little girl named Luna.<br><br>Luna was curious, adventurous, and loved to explore. She had a big heart and a bigger imagination. But there was one thing that made her nervous: <span class="emphasis">mistakes</span>.</p>
@@ -681,7 +670,7 @@
       <div class="page story-page" data-page="2" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">🍪</span>Luna baking with Snake & Crane helping</div>
+            <img src="../images/page-02-baking.webp" alt="Luna baking with Snake and Crane helping">
           </div>
           <div class="page-text-area">
             <p class="story-text">One sunny morning, Luna decided to bake her favourite chocolate chip cookies all by herself. She gathered all the ingredients: flour, sugar, butter, and chocolate chips.<br><br>As she mixed and stirred, she felt like a true chef! But when she reached for the baking powder, her hand slipped...</p>
@@ -694,7 +683,7 @@
       <div class="page story-page" data-page="3" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">🧂</span>Luna's shocked face, salt pouring everywhere</div>
+            <img src="../images/page-03-salt-disaster.webp" alt="Luna accidentally pouring salt everywhere">
           </div>
           <div class="page-text-area">
             <p class="story-text"><span class="dialogue">"Oh no! This is a disaster!"</span> Luna exclaimed, her eyes wide. She had accidentally poured in a whole cup of salt instead!<br><br>She felt like crying because she thought she had ruined everything.</p>
@@ -707,7 +696,7 @@
       <div class="page story-page" data-page="4" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">👵</span>Grandma comforting Luna in the kitchen</div>
+            <img src="../images/page-04-grandma-arrives.webp" alt="Grandma comforting Luna">
           </div>
           <div class="page-text-area">
             <p class="story-text">But just then, her wise grandmother walked in.<br><br><span class="dialogue">"Luna, what's wrong?"</span> Grandma asked gently.<br><br><span class="dialogue">"I made a mistake! I put in too much salt!"</span><br><br>Grandma smiled. <span class="dialogue">"You know, dear, mistakes can be magical if we let them be."</span></p>
@@ -720,7 +709,7 @@
       <div class="page story-page" data-page="5" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">✨</span>The Mistake Tree glowing with colourful leaves</div>
+            <img src="../images/page-05-mistake-tree-legend.webp" alt="The Magical Mistake Tree glowing">
           </div>
           <div class="page-text-area">
             <p class="story-text"><span class="dialogue">"Once upon a time,"</span> Grandma began, <span class="dialogue">"there was a tree in the woods called the <span class="emphasis">Mistake Tree</span>."</span><br><br><span class="dialogue">"Every time someone made a mistake, a new leaf would sprout on the tree, glowing with a bright, beautiful colour."</span></p>
@@ -733,7 +722,7 @@
       <div class="page story-page" data-page="6" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">🌳</span>The magnificent tree, Snake & Crane in branches</div>
+            <img src="../images/page-06-tree-closeup.webp" alt="Snake and Crane in the Mistake Tree">
           </div>
           <div class="page-text-area">
             <p class="story-text"><span class="dialogue">"The more mistakes people made, the more colourful the tree became. It turned into the most vibrant tree in the entire forest!"</span><br><br><span class="dialogue">"Because each leaf represented a lesson learned. The tree reminded everyone that mistakes help us <span class="emphasis">grow</span>."</span></p>
@@ -746,7 +735,7 @@
       <div class="page story-page" data-page="7" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">😝</span>Everyone tasting salty dough, funny faces</div>
+            <img src="../images/page-07-tasting-salty.webp" alt="Everyone tasting salty cookie dough">
           </div>
           <div class="page-text-area">
             <p class="story-text"><span class="dialogue">"But what if I can't fix it?"</span> Luna whispered.<br><br><span class="dialogue">"Let's find out together!"</span> Grandma said with a twinkle in her eye.<br><br>They tasted the cookie dough. Their faces scrunched up!<br><br><span class="dialogue">"Yikes!"</span> Luna giggled. <span class="dialogue">"That's definitely not right!"</span></p>
@@ -759,7 +748,7 @@
       <div class="page story-page" data-page="8" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">🤝</span>Luna & Grandma making a new batch together</div>
+            <img src="../images/page-08-new-batch.webp" alt="Making a new batch of cookies together">
           </div>
           <div class="page-text-area">
             <p class="story-text">Grandma chuckled. <span class="dialogue">"Let's add more sugar and make a whole new batch!"</span><br><br>Luna nodded, feeling excited. With a little <span class="emphasis">teamwork</span> and creativity, they made a brand-new batch of cookies.</p>
@@ -772,7 +761,7 @@
       <div class="page story-page" data-page="9" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">🍪</span>Everyone enjoying perfect cookies</div>
+            <img src="../images/page-09-cookies-celebration.webp" alt="Everyone celebrating with perfect cookies">
           </div>
           <div class="page-text-area">
             <p class="story-text">When the cookies were finally baked, the delicious smell filled the kitchen.<br><br>Luna took a bite, and her eyes sparkled with joy.<br><br><span class="dialogue">"These are the <span class="emphasis">best cookies ever!</span>"</span> she exclaimed.</p>
@@ -785,7 +774,7 @@
       <div class="page story-page" data-page="10" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">💛</span>Grandma hugging Luna, tree glowing outside</div>
+            <img src="../images/page-10-grandma-wisdom.webp" alt="Grandma hugging Luna with the tree glowing outside">
           </div>
           <div class="page-text-area">
             <p class="story-text">Grandma smiled and said, <span class="dialogue">"You see, Luna? Making mistakes helped us create something even <span class="emphasis">better</span>!"</span><br><br><span class="dialogue">"Every mistake is a chance to learn and grow."</span><br><br>From that day on, Luna embraced her mistakes.</p>
@@ -798,7 +787,7 @@
       <div class="page story-page" data-page="11" onclick="nextPage()">
         <div class="page-inner">
           <div class="page-img-area">
-            <div class="img-placeholder"><span class="icon">⭐</span>Luna at school, park, home - Snake & Crane beside her</div>
+            <img src="../images/page-11-embracing-mistakes.webp" alt="Luna embracing mistakes at school park and home">
           </div>
           <div class="page-text-area">
             <p class="story-text">Whether she stumbled in school, tripped while playing, or mixed up her words, she remembered the <span class="emphasis">Magical Mistake Tree</span>.<br><br>She learned that everyone makes mistakes, and it's okay as long as we learn from them.</p>
@@ -816,15 +805,8 @@
           <div class="cover-corner bl"></div>
           <div class="cover-corner br"></div>
           <div class="cover-content">
-            <div class="cover-tree" style="width:90px;height:110px;">
-              <div class="tree-canopy c4" style="transform:scale(0.75);"></div>
-              <div class="tree-canopy c2" style="transform:scale(0.75);"></div>
-              <div class="tree-canopy c1" style="transform:scale(0.75);"></div>
-              <div class="tree-canopy c3" style="transform:scale(0.75);"></div>
-              <div class="tree-canopy c5" style="transform:scale(0.75);"></div>
-              <div class="tree-trunk" style="height:40px;"></div>
-            </div>
-            <p style="font-size:clamp(14px,2.3vw,18px);color:rgba(255,255,255,0.55);line-height:1.7;font-style:italic;max-width:300px;text-align:center;">
+            <img src="../images/back-cover.webp" alt="Snake and Crane under the Mistake Tree" style="width:70%;max-width:180px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.3);margin-bottom:10px;">
+            <p style="font-size:clamp(14px,2.3vw,18px);color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;max-width:300px;text-align:center;">
               Mistakes are not just okay - they can be a step toward something amazing!<br><br>What mistakes will you turn into magic today?
             </p>
             <div class="cover-divider" style="margin-top:6px;"></div>
