@@ -6,7 +6,7 @@
 <title>The Magical Mistake Tree - MKF Stories</title>
 <link rel="icon" href="https://www.meridiankungfu.com/wp-content/uploads/2023/02/cropped-Meridian-Kung-fu-favicon-32x32.png" sizes="32x32">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;800;900&family=Teko:wght@500;600;700&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -20,38 +20,54 @@
     overflow-x: hidden;
   }
 
-  /* Top bar */
-  .top-bar {
+  /* Header - matches bookshelf page */
+  .header-wrap {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: #000;
-    border-bottom: 3px solid #c2090f;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     z-index: 100;
   }
 
-  .top-bar a {
-    color: #c2090f;
-    text-decoration: none;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    transition: color 0.2s;
+  .header {
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
   }
 
-  .top-bar a:hover { color: #ff3030; }
+  .header img {
+    width: min(180px, 32vw);
+    height: auto;
+  }
 
-  .top-bar .book-name {
+  .header-text { text-align: right; }
+
+  .header-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12px;
-    color: #888;
-    letter-spacing: 1px;
+  }
+
+  .header-sub {
+    font-size: 9px;
+    color: #c2090f;
+    font-weight: 600;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
+    margin-top: 2px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .nav-bar {
+    height: 3px;
+    background: #c2090f;
   }
 
   /* Book area */
@@ -61,7 +77,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 64px 16px 16px;
+    padding: 80px 16px 16px;
     width: 100%;
     min-height: 100vh;
   }
@@ -364,21 +380,23 @@
   }
 
   .cover-label {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 8px;
-    letter-spacing: 3px;
+    font-family: 'Teko', Impact, sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(194,9,15,0.7);
+    color: rgba(255,255,255,0.9);
     font-weight: 600;
   }
 
   .cover-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(22px, 4.5vw, 32px);
+    font-family: 'Teko', Impact, sans-serif;
+    font-size: clamp(30px, 6vw, 46px);
     color: #fff;
-    font-weight: 800;
-    line-height: 1.2;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-weight: 700;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);
   }
 
   .cover-divider {
@@ -394,11 +412,11 @@
   }
 
   .cover-mkf {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 7px;
-    letter-spacing: 2px;
+    font-family: 'Teko', Impact, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(194,9,15,0.35);
+    color: rgba(255,255,255,0.7);
     position: absolute;
     bottom: 22px;
     z-index: 5;
@@ -604,10 +622,16 @@
 </head>
 <body>
 
-<div class="top-bar">
-  <a href="/">&#8592; All Stories</a>
-  <span class="book-name">Snakes & Cranes</span>
+<div class="header-wrap">
+  <div class="header">
+    <a href="/"><img src="https://meridiankungfu.com/wp-content/uploads/2020/10/headerlogov444.png" alt="Meridian Kung Fu"></a>
+    <div class="header-text">
+      <div class="header-title">Mat Chat Stories</div>
+      <div class="header-sub">Interactive Storybooks</div>
+    </div>
+  </div>
 </div>
+<div class="nav-bar"></div>
 
 <div class="book-area">
 
